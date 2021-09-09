@@ -1,0 +1,29 @@
+@import url("/static/S-Core-Dream-light/s-core-dream.css");
+
+.btn_teacher {
+    border-color: rgb(0, 112, 192);
+    color: rgb(95, 34, 206);
+    box-shadow: 0 0 40px 40px rgb(247, 130, 130) inset, 0 0 0 0 rgb(247, 130, 130);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn_teacher:hover {
+    box-shadow: 0 0 10px 0 rgb(247, 130, 130) inset, 0 0 10px 4px rgb(247, 130, 130);
+    color: rgb(95, 34, 206);
+  }
+
+  .btn_student {
+    border-color: rgb(108, 251, 176);
+    color: rgb(95, 34, 206);
+    box-shadow: 0 0 40px 40px rgb(108, 251, 176) inset, 0 0 0 0 rgb(108, 251, 176);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn_student:hover {
+    box-shadow: 0 0 10px 0 rgb(108, 251, 176) inset, 0 0 10px 4px rgb(108, 251, 176);
+    color: rgb(95, 34, 206);
+  }
