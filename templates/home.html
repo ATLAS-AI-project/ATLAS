@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/home.js"></script>
+</head>
+
+<body>
+    <div class="wrap-loading display-none">
+        <div>
+            <video muted autoplay loop>
+                  <source src="../static/loading.mp4" type="video/mp4">
+             </video>
+        </div>
+    </div>
+
+    <div class="guide">
+        <div class="head_container" id="head">ATLAS 인공지능이 키워드를 추출합니다.<br>아래 좌측 박스에 원문을 삽입하세요.
+        </div>
+    </div>
+
+    <div class="item-wrap">
+        <div class="items">
+            <div class="item left">
+                <div class="inner">
+                    <span>
+                        <textarea id="inputText" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
+                </textarea>
+                    </span>
+                </div>
+            </div>
+
+            <div class="item right">
+                <div class="inner">
+                    <span>
+                        <table id="resultWindow" type="text">
+                        </table>
+                        </table>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="item-wrap">
+        <div class="items" style="height: 55px;">
+            <span class="item left">
+                <div class="inner" style="
+                height: 50px;
+                padding-top: 0px;
+                border-top-width: 1px;
+                ">
+                    <span class="byte_container"><span id="nowByte" style="color: green;padding-right: 95px;"></span>/3000 bytes</span>
+                </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <div class="item-wrap" style="margin-top: 0px;">
+        <div class="items" style="margin: 0px; ">
+            <div class="item left">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container">
+                        <button id="btn" onclick="btnClick()">실행</button>
+                    </span>
+                </div>
+            </div>
+             <div class="item left">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container">
+                        <button id="btn" onclick="btnClick1()">키워드 추출</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="item right">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container">
+                        <button id="btn" onclick="btnClick2()">평가문항 생성</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
