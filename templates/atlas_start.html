@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/atlas_start.js"></script>
+</head>
+<body>
+    <div class="wrap-loading">
+        <div>
+<!--            <img src="../static/ajax-loader.gif" />-->
+             <video muted autoplay loop>
+                  <source src="../static/atlas.mp4" type="video/mp4">
+             </video>
+        </div>
+    </div>
+    <script>
+        function btnClick() {
+            const inputText = $("#inputText").val();
+            console.log(inputText)
+            $.ajax({
+                type: "POST",
+                url: "/inputText",
+                data: {data:inputText},
+                success: function(toStr){
+                   console.log(toStr)
+                   const quizWin = window.open('http://127.0.0.1:5000/quiz', '_blank');
+                   $("#result_list").append(`${toStr} `)
+                },
+                beforeSend:function(){
+                    $('.wrap-loading').removeClass('display-none');
+                },
+                complete:function(){
+                    $('.wrap-loading').addClass('display-none');
+                }
+            })
+        }
+    </script>
+</body>
+</html>
