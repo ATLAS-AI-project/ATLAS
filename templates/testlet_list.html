@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/btn_colors.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="guide">
+        <div class="head_container" >저장되어 있는 문제지 목록입니다.<br><br>
+            하단 버튼으로 해당 작업을 수행할 수 있습니다.<br>
+        </div>
+
+        <div class="item-wrap" style="margin-top: 0px;">
+            <div class="items" style="margin: 0px;style=;padding-top: 0px;height:20px;">
+                <div class="item left">
+                    <div class="inner" style="height: 35px; ">
+                        <span class="testlet_name"></span>
+                    </div>
+                </div>
+
+                <div class="item right">
+                    <div class="inner" style="height: 35px; ">
+                        <span class="btn_container"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-wrap" style="margin-top: 20px;">
+            <div class="items">
+                <div class="item left">
+                    <span>
+                        <div style="border: 4px solid rgb(108, 251, 176); height: 390px; width: 1150px; padding: 10px;">여기에 문제지 목록이 출력됨.</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-wrap" style="margin-top: 10px;">
+            <div class="items" style="margin: 0px;style=;padding-top: 300px;height: 50px;">
+                <div class="item left" style="height: 50px;">
+                    <div class="inner" style="height: 75px; ">
+                        <span class="btn_container">
+                            <button class="btn_green" onclick="btnClick()">
+                                <font size=5>초기 화면으로</font>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="item right" style="height: 50px;">
+                    <div class="inner" style="height: 75px; ">
+                        <span class="btn_container">
+                            <button class="btn_green" onclick="btnClick()">
+                                <font size=5>성적 확인</font>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="item right" style="height: 50px;">
+                    <div class="inner" style="height: 75px; ">
+                        <span class="btn_container">
+                            <button class="btn_green" onclick="btnClick()">
+                                <font size=5>문제지 삭제</font>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="../static/small_logo_pivot.png" width="90px" height="105px" style="margin-left: 1643px;">
+
+</body>
+</html>

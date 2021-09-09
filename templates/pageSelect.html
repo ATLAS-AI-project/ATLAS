@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
     <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/btn_colors.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="static/pageSelect.js"></script>
+    <script src="../static/pageSelect.js"></script>
 </head>
-<body>
 
+<body>
     <div class="guide">
         <div class="head_container">방문하고 싶은 페이지를 눌러 보세요.<br> 
         </div>
     </div>
 
-    <div class="item-wrap" style="margin-top: 0px;">
-        <div class="items" style="margin: 0px;style=;padding-top: 240px;">
-            <div class="item left">
-                <div class="inner" style="height: 75px; ">
-                    <span class="btn_container" >
-
-                        <button src="../static/teacher.png" width="500px", height="130px" id="btnclk" onclick="btnclk()">
-                    </span>
-                </div>
-            </div>
-
-            <div class="item right">
+    <div class="item-wrap" style="margin-top: 10px;">
+        <div class="items" style="margin: 0px;style=;padding-top: 300px;height: 50px;">
+            <div class="item left" style="height: 50px;">
                 <div class="inner" style="height: 75px; ">
                     <span class="btn_container">
-                        <img src="../static/student.png" width="500px", height="130px">
+                        <button class="btn_teacher" onclick="btnclk()">
+                            <font size=6>선생님 페이지</font>
+                        </button>
                     </span>
                 </div>
             </div>
-        </div>
+
+            <div class="item right" style="height: 50px;">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container">
+                        <button class="btn_student" onclick="btnClick()">
+                            <font size=6>학생 페이지</font>
+                        </button>
+                    </span>
+                </div>
+            </div>
     </div>
+
+    <div class="item-wrap" style="margin-top: 10px;">
+        <div class="items" style="margin: 0px;style=;padding-top: 221px;height: 50px;">
+            <div class="item left" style="height: 50px;">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container"></span>
+                </div>
+            </div>
+
+            <div class="item right" style="height: 50px;">
+                <div class="inner" style="height: 75px; ">
+                    <span class="btn_container"></span>
+                </div>
+            </div>
+    </div>
+
+    <img src="../static/small_logo_pivot.png" width="90px" height="105px" style="margin-left: 1198px;">
+
 </body>
+
 </html>
