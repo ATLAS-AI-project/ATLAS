@@ -9,7 +9,7 @@
     <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/btn_colors.css" />
-    <link rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" type="text/css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../static/home.js"></script>
 </head>
@@ -17,7 +17,7 @@
 <body>
     <div class="wrap-loading display-none">
         <div>
-            <video muted autoplay loop>
+            <video muted autoplay loop width="100%" width="100%" height="100%">
                   <source src="../static/loading.mp4" type="video/mp4">
              </video>
         </div>
@@ -32,13 +32,13 @@
 
     <span class="guide">
         <div class="items_h_container" style="margin-top: 50px; ">
-            <div class="leftitem" style="margin-right: 56px;">
+            <div class="leftitem" style="margin-right: 56px;" overflow: auto;>
                 <textarea id="inputText" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
                 </textarea>
             </div>
             <div class='rightitem' style="margin-left: 60px;">
-                <textarea id="resultWindow" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
-            </textarea>
+                <table id="resultWindow" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
+            </table>
             </div>
         </div>
     </span>
