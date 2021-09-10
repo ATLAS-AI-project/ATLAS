@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # ------ Kobart, TextRank 조건 설정 -----#
 KBR = KB.Runner(eos_token_id=1, max_length=500, num_beams=5)
-TRR = TR.Runner(window=5, coef=1, extract=0.3)
+TRR = TR.Runner(window=5, coef=1, extract=0.5)
 
 @app.route("/", methods=["GET"])
 def startpage(): # 페이지에서 값을 받아오는 메소드
