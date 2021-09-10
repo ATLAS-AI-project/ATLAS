@@ -9,8 +9,8 @@ class Runner:
     def Run_Single_Text(self, text):  # 텍스트가 한 개일 때. 하단 text 부분에 텍스트를 넣고 결과 출력할 것.
         import torch
         from kobart import get_kobart_tokenizer
-        #from kobart_transformers import get_kobart_tokenizer
-        from transformers.models.bart import BartForConditionalGeneration
+        #from kobart_transformers import get_kobart_tokenizer    #파이썬패키지  kobart_transformers 를 사용할경우 사용
+        from transformers.models.bart import BartForConditionalGeneration  
 
         list_changer = []
         final_result = ""
