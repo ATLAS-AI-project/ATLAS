@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,68 +23,56 @@
         </div>
     </div>
 
-    <div class="guide">
-        <div class="head_container">ATLAS 인공지능이 키워드를 추출합니다.<br><br>아래 좌측 박스에 원문을 삽입하세요.
-        </div>
+    <div class="head_container">
+        ATLAS 인공지능이 키워드를 추출합니다.
+    </div>
+    <div class="head_container2">
+        아래 좌측 박스에 원문을 삽입하세요.
     </div>
 
-    <div class="item-wrap">
-        <div class="items">
-            <div class="item left">
-                <div class="inner" style="margin-top: 15px; margin-right: 50px;">
-                    <span>
-                        <textarea id="inputText" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
-                        </textarea>
-                    </span>
-                </div>
-            </div>
-
-            <div class="item right">
-                <div class="inner" style="margin-top: 15px; margin-left: 50px;">
-                    <span>
-                        <textarea id="resultWindow" type="text">
+    <span class="guide">
+        <div class="items_h_container" style="margin-top: 50px; ">
+            <div class="leftitem" style="margin-right: 56px;">
+                <textarea id="inputText" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
                 </textarea>
-                    </span>
-                </div>
+            </div>
+            <div class='rightitem' style="margin-left: 60px;">
+                <textarea id="resultWindow" type="text" placeholder="300~1500자 입력" onkeyup="checkByte(this)">
+            </textarea>
             </div>
         </div>
-    </div>
+    </span>
 
-
-    <div class="item-wrap">
-        <div class="items" style="height: 50px;">
-            <span class="item left">
-                <div class="inner" style="
-                height: 30px;
-                padding-top: 0px;
-                border-top-width: 1px;
-                ">
-                    <span class="byte_container"><span id="nowByte" style="color: green;padding-right: 95px;"></span>/3000 bytes</span>
-                </div>
+    <span class="guide2">
+        <div class="btn_container">
+            <span class="byte_container" style="margin-top: 370px; ">
+                <span id="nowByte" style="color: green;padding-right: 3px;">
+                </span>
+                / 3000 bytes
+            </span>
         </div>
 
-    </div>
-    
-
-    <div class="item-wrap" style="margin-top: 0px;">
-        <div class="items" style="margin: 0px;height: 50px;">
-            <div class="item left">
-                <div class="inner" style="height: 75px; ">
-                    <span class="btn_container">
-                        <button class="btn_darkblue" onclick="btnClick()">키워드 추출</button>
-                    </span>
-                </div>
-            </div>
-
-            <div class="item right">
-                <div class="inner" style="height: 75px; ">
-                    <span class="btn_container">
-                        <button class="btn_darkblue" onclick="btnClick()">평가문항 생성</button>
-                    </span>
-                </div>
-            </div>
+        <div class="btn_container">
+            <span class="byte_container" style="margin-top: 340px; ">
+                <span id="nowByte" style="color: green;padding-right: 95px;">
+                </span>
+            </span>
         </div>
-    </div>
+    </span>
+
+    <span class="guide" style="margin-top: 378px; ">
+        <div class="btn_container">
+            <button class="btn_darkblue" onclick="btnClick()">
+                <font size=6>키워드 추출</font>
+            </button>
+        </div>
+
+        <div class="btn_container">
+            <button class="btn_darkblue" onclick="btnClick()">
+                <font size=6>평가문항 생성</font>
+            </button>
+        </div>
+    </span>
     
 
     <script>
@@ -137,7 +126,7 @@
         }
     </script>
 
-<img src="../static/small_logo_pivot.png"  width="90px" height="105px"  style="margin-left: 1643px;">
+<img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; padding-top: 0px;">
 
 </body>
 

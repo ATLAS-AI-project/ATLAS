@@ -12,40 +12,31 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../static/pageSelect.js"></script>
 </head>
 
 <body>
-    <div class="guide">
-        <div class="head_container">방문하고 싶은 페이지를 눌러 보세요.<br> 
+    <div class="head_container">
+        방문하고 싶은 페이지를 눌러 보세요.<br> 
+    </div>
+
+    <span class="guide" style="margin-top: 320px; ">
+        <div class="btn_container" >
+            <button class="btn_teacher" onclick="btnClick()">
+                <font size=6>선생님 페이지</font>
+            </button>
         </div>
-    </div>
 
-    <div class="item-wrap" style="margin-top: 10px;">
-        <div class="items" style="margin: 0px;style=;padding-top: 300px;height: 50px;">
-            <div class="item left" style="height: 50px;">
-                <div class="inner" style="height: 75px; ">
-                    <span class="btn_container">
-                        <button class="btn_teacher" onclick="btnclk()">
-                            <font size=6>선생님 페이지</font>
-                        </button>
-                    </span>
-                </div>
-            </div>
+        <div class="btn_container">
+            <button class="btn_student" onclick="btnClick()">
+                <font size=6>학생 페이지</font>
+            </button>
+        </div>
+    </span>
 
-            <div class="item right" style="height: 50px;">
-                <div class="inner" style="height: 75px; ">
-                    <span class="btn_container">
-                        <button class="btn_student" onclick="btnClick()">
-                            <font size=6>학생 페이지</font>
-                        </button>
-                    </span>
-                </div>
-            </div>
-    </div>
+<!-- 하기 코드는 레이아웃 유지용 코드 -->
 
-    <div class="item-wrap" style="margin-top: 10px;">
-        <div class="items" style="margin: 0px;style=;padding-top: 221px;height: 50px;">
+    <div class="item_area_70" style="margin-top: 10px;">
+        <div class="items" style="margin: 0px;height: 50px;">
             <div class="item left" style="height: 50px;">
                 <div class="inner" style="height: 75px; ">
                     <span class="btn_container"></span>
@@ -59,7 +50,7 @@
             </div>
     </div>
 
-    <img src="../static/small_logo_pivot.png" width="90px" height="105px" style="margin-left: 1198px;">
+    <img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1527px; padding-top: 274px;">
 
 </body>
 
