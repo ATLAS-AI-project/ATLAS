@@ -18,27 +18,5 @@
     <div style="text-align: center;">
         <img src="../static/slogan.png" width="55%" />
     </div>
-    <script>
-        function btnClick() {
-            const inputText = $("#inputText").val();
-            console.log(inputText)
-            $.ajax({
-                type: "POST",
-                url: "/inputText",
-                data: {data:inputText},
-                success: function(toStr){
-                   console.log(toStr)
-                   const quizWin = window.open('http://127.0.0.1:5000/quiz', '_blank');
-                   $("#result_list").append(`${toStr} `)
-                },
-                beforeSend:function(){
-                    $('.wrap-loading').removeClass('display-none');
-                },
-                complete:function(){
-                    $('.wrap-loading').addClass('display-none');
-                }
-            })
-        }
-    </script>
 </body>
 </html>
