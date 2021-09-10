@@ -16,8 +16,8 @@ class Runner:
         final_result = ""
 
         def load_model():
-            #model = BartForConditionalGeneration.from_pretrained("./kobart-summary" )
-            model = BartForConditionalGeneration.from_pretrained("hyunwoongko/kobart")
+            model = BartForConditionalGeneration.from_pretrained("./kobart_summary" )
+#             model = BartForConditionalGeneration.from_pretrained("hyunwoongko/kobart")
             # tokenizer = get_kobart_tokenizer()
             return model
 
@@ -59,7 +59,8 @@ class Runner:
         final_result = ""
 
         def load_model():
-            model = BartForConditionalGeneration.from_pretrained("hyunwoongko/kobart")
+            model = BartForConditionalGeneration.from_pretrained("./kobart_summary" )
+#             model = BartForConditionalGeneration.from_pretrained("hyunwoongko/kobart")
             tokenizer = get_kobart_tokenizer()
             return model
 
