@@ -3,7 +3,7 @@ body, h1, h2, h3, h5, div {
 }
 
 body {
-  background-color: #f5f6f7;
+  background-color: #fafafa;
   /* background-image: url('new1.png'); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,27 +23,37 @@ body {
   /* margin-bottom: 50px; */
 }
 
+.head_container2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  /* margin-bottom: 50px; */
+}
+
 #inputText {
   width: 550px;
-  height: 380px;
+  height: 410px;
   filter: opacity(80%);
   border-radius: 5px;
   border: 1px;
   overflow-y: scroll;
 }
 
-#inputTextLong {
-  width: 1450px;
-  height: 400px;
+#subtitle {
+  width: 550px;
+  height: 410px;
   filter: opacity(80%);
-  border-radius: 5px;
+  border-radius: 50px;
   border: 1px;
-  overflow-y: scroll;
 }
 
 #resultWindow {
   width: 550px;
-  height: 380px;
+  height: 410px;
   filter: opacity(80%);
   border-radius: 5px;
   border: 1px;
@@ -62,8 +72,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0px;
-  /* border-style: solid; */
+  border-radius: 530px;
+  filter: opacity(100%);
+}
+
+.items_h_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   border-radius: 530px;
   filter: opacity(100%);
 }
@@ -86,31 +102,11 @@ body {
   text-align: center;
 }
 
-#btn_long_darkblue {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-  color: rgb(0, 112, 192);
-  border-style: solid;
-  border-color: rgb(0, 112, 192);
-  position: relative;
-  height: 110px;
-  width: 550px;
-  cursor: pointer;
-  transition: 300ms ease all;
-  outline: none;
-  filter: opacity(70%);
-  border-radius: 530px;
-}
-
 .testlet_name {
   width: 80%;
   display: flex;
   justify-content: center;
   margin: 0px;
-  /* border-style: solid; */
   border-radius: 530px;
   filter: opacity(100%);
 }
@@ -210,14 +206,19 @@ button {
   border-radius: 510px;
 }
 
+textarea {
+z-index: 1;
+}
+
 .wrap-loading {
   /*화면 전체를 어둡게 합니다.*/
+  z-index: 2;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 1);
   /*not in ie */
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');
   /* ie */
@@ -236,13 +237,13 @@ button {
   display: none;
 }
 
-.item-wrap {
+.item_area_70 {
   max-width: 70%;
   margin: 0 auto;
   margin-top: 150px;
 }
 
-.item-wrap-t-s {
+.item_area_100 {
   max-width: 100%;
   margin: 0 auto;
   margin-top: 150px;
@@ -260,7 +261,7 @@ button {
   height: 150px;
 }
 
-.item-wrap .guide {
+.guide {
   /* 자식들을 감싸고 있는 부모 */
   display: -moz-box;
   display: -ms-flexbox;
@@ -269,6 +270,26 @@ button {
   /* flex container를 만들어주는 속성 */
   justify-content: space-between;
   /* 행 정렬 하는 속성, 영역 간 공백을 만들어주는 속성 */
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 50px;
+}
+
+.guide2 {
+  /* 자식들을 감싸고 있는 부모 */
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* flex container를 만들어주는 속성 */
+  justify-content: space-around;
+  /* 행 정렬 하는 속성, 영역 간 공백을 만들어주는 속성 */
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
   height: 50px;
 }
 

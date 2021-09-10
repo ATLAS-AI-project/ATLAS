@@ -56,7 +56,8 @@ function btnClick1() {
             <td>${result}</td>
             <td><input type="checkbox" name= chkbox></td>
           </tr>
-        </tbody>`)}
+        </tbody>`
+    )}
  }
 
 function checkByte(obj){
