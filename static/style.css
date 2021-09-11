@@ -40,7 +40,9 @@ body {
   filter: opacity(80%);
   border-radius: 5px;
   border: 1px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  font-size: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #subtitle {
@@ -57,7 +59,14 @@ body {
   filter: opacity(80%);
   border-radius: 5px;
   border: 1px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  font-size: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resultWindowLong {
+  font-size: 20px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .byte_container {
@@ -69,11 +78,15 @@ body {
 }
 
 .btn_container {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   border-radius: 530px;
   filter: opacity(100%);
+}
+
+#title_print {
+  font-size: 25px;
 }
 
 .items_h_container {
@@ -100,6 +113,7 @@ body {
   margin: 0px;
   padding: 0px;
   text-align: center;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .testlet_name {
@@ -109,6 +123,7 @@ body {
   margin: 0px;
   border-radius: 530px;
   filter: opacity(100%);
+  font-size: 25px;
 }
 
 .testlet_name .title_purple {
@@ -128,6 +143,7 @@ body {
   outline: none;
   filter: opacity(100%);
   border-radius: 100px;
+  font-size: 25px;
   }
 
 .testlet_name .title_darkblue {
@@ -211,7 +227,6 @@ z-index: 1;
 }
 
 .wrap-loading {
-  /*화면 전체를 어둡게 합니다.*/
   z-index: 2;
   position: fixed;
   left: 0;
@@ -219,6 +234,19 @@ z-index: 1;
   top: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 1);
+  /*not in ie */
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');
+  /* ie */
+}
+
+#wrap-loading-green {
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgb(101, 240, 195);
   /*not in ie */
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');
   /* ie */
@@ -291,46 +319,4 @@ z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
   height: 50px;
-}
-
-.item-wrap .items .item {
-  /* 나란히 배치할 영역 */
-  text-align: center;
-  width: 50%;
-  margin: 0 5px;
-  /* 간격을 위해 준 속성 */
-}
-
-.item-wrap .items .item .inner {
-  /* 나란히 배치할 영역 안 텍스트를 감싼 div */
-  position: relative;
-  /* background: aliceblue; */
-  height: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.item-wrap .items .item .inner: before {
-  /* 텍스트를 수직 가운데 정렬하기 위한 가상선택자 */
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.item-wrap .items .item .inner span {
-  /* 가상선택자와 나란히 배치하기 위해 준 속성 */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  word-break: break-all;
 }
