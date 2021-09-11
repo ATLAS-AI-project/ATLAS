@@ -15,6 +15,10 @@ TRR = TR.Runner(window=5, coef=1, extract=0.5)
 def startpage(): # 페이지에서 값을 받아오는 메소드
     return render_template('atlas_start.html')
 
+@app.route("/login", methods=["GET"])
+def login_page():
+    return render_template('login.html')
+
 @app.route("/home", methods=["GET"])
 def mainpage(): # 페이지에서 값을 받아오는 메소드
     return render_template('home.html')
@@ -49,6 +53,22 @@ def insert_text():
 @app.route("/quiz", methods=["GET"])
 def quiz_page():
     return render_template('quiz.html')
+
+@app.route("/testlet_t", methods=["GET"])
+# 선생님용 문제지 리스트 페이지
+def testlet_t_page():
+    return render_template('testlet_t.html')
+
+@app.route("/testlet_s", methods=["GET"])
+# 학생용 문제지 리스트 페이지
+def testlet_s_page():
+    return render_template('testlet_s.html')
+
+@app.route("/grades", methods=["GET"])
+def grades_page():
+    return render_template('grades.html')
+
+
 
 if __name__ == "__main__":
     app.run(debug=True) #http://127.0.0.1:5000/
