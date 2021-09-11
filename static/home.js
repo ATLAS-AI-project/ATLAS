@@ -11,8 +11,7 @@ function btnClick() {
            glo_key = response['keyword']
            glo_count = response['count']
            glo_questions = response['questions']
-        }
-        ,
+        },
         beforeSend:function(){
             $('.wrap-loading').removeClass('display-none');
         },
@@ -40,25 +39,25 @@ function btnClick() {
     })
 }
 
-function btnClick1() {
-   $("#resultWindow").empty()
-   $("#resultWindow").append(`
-   <thead>
-       <tr>
-          <th>키워드</th><th>선택</th>
-       </tr>
-   </thead>`)
-   for (let i =0; i< glo_key.length; i++) {
-      let result= glo_key[i];
-      $("#resultWindow").append(`
-        <tbody>
-          <tr>
-            <td>${result}</td>
-            <td><input type="checkbox" name= chkbox></td>
-          </tr>
-        </tbody>`
-    )}
- }
+//function btnClick1() {
+//
+//   $("#resultWindow").empty()
+//   $("#resultWindow").append(`
+//   <thead>
+//       <tr>
+//          <th>키워드</th><th>선택</th>
+//       </tr>
+//   </thead>`)
+//   for (let i =0; i< glo_key.length; i++) {
+//      let result= glo_key[i];
+//      $("#resultWindow").append(`
+//        <tbody>
+//          <tr>
+//            <td>${result}</td>
+//            <td><input type="checkbox" name= chkbox></td>
+//          </tr>
+//        </tbody>`)}
+// }
 
 function checkByte(obj){
     const maxByte = 3000; //최대 3000바이트
@@ -89,8 +88,8 @@ function checkByte(obj){
 }
 
 function btnClick2(){
-//     $("#resultWindow").prop("checked", true);
-//     $("#resultWindow").prop("checked", false);
+     $("#resultWindow").prop("checked", true);
+     $("#resultWindow").prop("checked", false);
      const inputText = $("#inputText").val();
      console.log(inputText)
      idxes = []
@@ -104,27 +103,22 @@ function btnClick2(){
            idxes.push(idx);
          }
      })
-
+     $("#resultWindow").empty()
      idxes.forEach(function(idx) {
-        $("#resultWindow").empty()
         console.log(glo_key)
         select_keyword.push(glo_key[idx])
         console.log(select_keyword)
         select_question.push(glo_questions[idx])
         console.log(select_question)
-
-        $("#resultWindow").append(`<tr><td>${select_keyword}</td><td>${select_question}</td></tr>`)
+//            $("#resultWindow").append(`<tr><td>${select_keyword}</td><td>${select_question}</td></tr>`)
     })
-
-    for (let i =0; i< select_question.length; i++) {
+     for (let i =0; i< select_question.length; i++) {
         questionToString = select_question[i].toString()
         console.log(questionToString)
-        change = questionToString.replaceAll(select_keyword[i], '__')
+        change = questionToString.replaceAll(select_keyword[i], '___')
         final_question.push(change)
     }
-
         console.log(final_question)
-
     localStorage.setItem('key',JSON.stringify(glo_key))
     localStorage.setItem('count',JSON.stringify(glo_count))
     localStorage.setItem('questions',JSON.stringify(glo_questions))
