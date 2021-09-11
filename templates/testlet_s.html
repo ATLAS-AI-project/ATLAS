@@ -9,8 +9,9 @@
     <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/btn_colors.css" />
+    <link rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../static/grades.js"></script>
+    <!-- <script src="../static/home.js"></script> -->
 </head>
 
 <body>
@@ -23,28 +24,28 @@
     </div>
 
     <div class="head_container">
-        학생들의 성적을 확인하세요.
+        선생님께서 만들어 놓으신 문제지에요.
     </div>
     <div class="head_container2">
-        하단 버튼으로 해당 작업을 수행할 수 있습니다.
+        아래 버튼을 눌러서 문제를 풀어볼까요?
     </div>
 
     <div style="margin-top: 100px;">
         <span>
-            <div class="resultWindowLong" style="border: 4px solid rgb(0, 176, 240);height: 390px;width: 64%;padding: 10px;margin-left: 18%;margin-right: 18%">여기에 학생별 성적이 출력됨.</div>
+            <div class="resultWindowLong" style="border: 4px solid rgb(0, 112, 192);height: 390px;width: 64%;padding: 10px;margin-left: 18%;margin-right: 18%">여기에 이해점검 문항이 출력됨.</div>
         </span>
     </div>
 
     <span class="guide" style="margin-top: 60px; ">
             <div class="btn_container" >
-                <button class="btn_blue" onclick="homebtn()">
-                    <font size=6>키워드 추출로</font>
+                <button class="btn_darkblue" onclick="btnClick()">
+                    <font size=6>문제 풀기</font>
                 </button>
             </div>
 
             <div class="btn_container">
-                <button class="btn_blue" onclick="listbtn()">
-                    <font size=6>문제지 목록으로</font>
+                <button class="btn_darkblue" onclick="btnClick()">
+                    <font size=6>점수 확인</font>
                 </button>
             </div>
     </span>
