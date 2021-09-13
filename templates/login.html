@@ -1,115 +1,56 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ASIBA Login</title>
-
+    <title>ATLAS; Automated Teacher-Studens Anchoring System</title>
     <link rel="stylesheet" href="/static/style.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
-    
+	<link rel="stylesheet" href="/static/login.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
 <body>
-	<div class="login_container">
-		<div class="main_wrap">
-		<header>
-			<div class="logo-wrap">
-				<img src="./static/011-idea.png" width="7%">
+	<div class="head_container">
+		ATLAS
+    </div>
+    <div class="head_container2">
+        Automated Teacher-Learner Anchoring System
+    </div>
+
+	<div class="login_box">
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/id_icon.png" style="height: 45px; margin-right: 10px;">
+				<textarea id="id_value" type="text" placeholder="ID를 입력하세요." style="height: 45px; border: 0px; shadow: none; outline: none; resize: none; margin-right: 45px;" ></textarea>
 			</div>
-
-
-            <div class="logo-wrap">
-				<img src="./static/title_project.png" width="40%">
+		</div>
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/pwd_icon.png" style="height: 45px; margin-right: 10px;">
+				<textarea id="pwd_value" type="text" placeholder="비밀번호를 입력하세요." style="height: 45px; border: 0px; shadow: none; outline: none; resize: none; margin-right: 45px;"></textarea>
 			</div>
-		</header>
+		</div>
 
-        <div class="login-input-wrap">	
-            <input placeholder="Username" type="text"></input>
-        </div>
-        <div class="login-input-wrap password-wrap">	
-            <input placeholder="Password" type="password"></input>
-        </div>
-        <div class="login-button-wrap">
-            <button>Sign in</button>
-        </div>
+		<div class="parallel_box">
+			<img src="../static/blank.png" style="height: 45px; margin-right: 10px;">
+			
+				<button class="loginBtn" style="margin-right: 45px;">
+					<div class="confirm_btn" >
+						LOGIN
+					</div>
+				</button>
 
-		<footer>
-			<div class="copyright-wrap">
-			<span>
-                <img src="./static/project_logo.png" width="10%">
-            </span>
-			</div>
-		</footer>
+<!--				<button class="confirm_btn" onclick="loginClick()" style="margin-right: 45px;">-->
+<!--                	<font size=6>LOGIN</font>-->
+<!--            	</button>-->
 		</div>
 	</div>
 
-	<img src="../static/small_logo_pivot.png" width="5%" height="5%" style="margin-left: 1643px;">
+	<img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; margin-top: 66px; ">
 
 </body>
-
-
-
-
-
-
-
-
-<!-- <!doctype HTML>
-
-<body>
-	<div class="main-container">
-		<div class="main-wrap">
-		<header>
-			<div class="sel-lang-wrap">
-				<select class="lang-select">
-					<option>한국어</option>
-					<option>English</option>
-				</select>
-			</div>
-			<div class="logo-wrap">
-				<img src="img/logo.png">
-			</div>
-		</header>
-		<section class="login-input-section-wrap">
-			<div class="login-input-wrap">	
-				<input placeholder="Username" type="text"></input>
-			</div>
-			<div class="login-input-wrap password-wrap">	
-				<input placeholder="Password" type="password"></input>
-			</div>
-			<div class="login-button-wrap">
-				<button>Sign in</button>
-			</div>
-			<div class="login-stay-sign-in">
-				<i class="far fa-check-circle"></i>
-				<span>Stay Signed in</span>
-			</div>
-		</section>
-		<section class="Easy-sgin-in-wrap">
-			<h2>Easier sign in</h2>
-			<ul class="sign-button-list">
-				<li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
-				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
-				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
-			</ul>
-			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
-		</section>
-		<footer>
-			<div class="copyright-wrap">
-			<span>	<img src="img/logo.png"> Copyright © NAVER Corp. All Rights Reserved.</span>
-			</div>
-		</footer>
-		</div>
-	</div>
-</body> -->
-
-
-
-
-
+</html>
