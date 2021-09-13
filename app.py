@@ -68,7 +68,9 @@ def testlet_s_page():
 def grades_page():
     return render_template('grades.html')
 
-
+@app.route("/quiz_s", methods=["GET"])
+def quiz_s_page():
+    return render_template('quiz_s.html')
 
 if __name__ == "__main__":
     app.run(debug=True) #http://127.0.0.1:5000/
