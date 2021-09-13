@@ -20,7 +20,6 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  /* margin-bottom: 50px; */
 }
 
 .head_container2 {
@@ -31,7 +30,6 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
-  /* margin-bottom: 50px; */
 }
 
 #inputText {
@@ -66,8 +64,9 @@ body {
 
 .resultWindowLong {
   font-size: 20px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
+
+.test
 
 .byte_container {
   font-size: 15px;
@@ -116,17 +115,31 @@ body {
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.testlet_name {
-  width: 80%;
+.title_container {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0px;
   border-radius: 530px;
   filter: opacity(100%);
   font-size: 25px;
+  margin-right: 5%;
 }
 
-.testlet_name .title_purple {
+.testlet_name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  border-radius: 530px;
+  filter: opacity(100%);
+  font-size: 25px;
+  margin-right: 5%;
+}
+
+.testlet_name .title_t {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -146,65 +159,25 @@ body {
   font-size: 25px;
   }
 
-.testlet_name .title_darkblue {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-  color: rgb(0, 0, 0);
-  border-style: solid;
-  border-color: rgb(0, 112, 192);
-  position: relative;
-  height: 110px;
-  width: 550px;
-  cursor: pointer;
-  transition: 300ms ease all;
-  outline: none;
-  filter: opacity(100%);
-  border-radius: 100px;
-  }
-
-.testlet_name .title_blue {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-  color: rgb(0, 0, 0);
-  border-style: solid;
-  border-color: rgb(0, 176, 240);
-  position: relative;
-  height: 110px;
-  width: 550px;
-  cursor: pointer;
-  transition: 300ms ease all;
-  outline: none;
-  filter: opacity(100%);
-  border-radius: 100px;
-  }
-
-.testlet_name .title_green {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-  color: rgb(0, 0, 0);
-  border-style: solid;
-  border-color: rgb(15, 205, 147);
-  position: relative;
-  height: 110px;
-  width: 550px;
-  cursor: pointer;
-  transition: 300ms ease all;
-  outline: none;
-  filter: opacity(100%);
-  height: 30px;
-  width: 100%;
-  padding: 10px;
-  border-radius: 100px;
-  }
+  .testlet_name .title_s {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-color: rgb(72, 211, 139);
+    position: relative;
+    height: 110px;
+    width: 550px;
+    cursor: pointer;
+    transition: 300ms ease all;
+    outline: none;
+    filter: opacity(100%);
+    border-radius: 100px;
+    font-size: 25px;
+    }
 
 button {
   background: #ffffff;

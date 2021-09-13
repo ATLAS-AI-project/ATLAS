@@ -11,7 +11,7 @@ window.onload= function() {
    for (let i =0; i< final_question.length; i++) {
       let result= final_question[i];
       let keyword= select_keyword[i];
-      $("#testlist").append(`
+      $("#quizlist").append(`
         <tbody>
           <tr>
             <td>${result}</td>
@@ -40,6 +40,19 @@ function savebtn() {
         save.dispatchEvent(event);
     }
   }
+
+//  function dwltn() {
+//    filename = document.getElementById("title_print").value;
+//    quest = final_question.toString().replace(/,/g, '.\n\n\n')
+//    var save = document.createElement('a');
+//    save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(quest));
+//    save.setAttribute('download', filename);
+//    if (document.createEvent) {
+//          var event = document.createEvent('MouseEvents');
+//          event.initEvent('click', true, true);
+//          save.dispatchEvent(event);
+//      }
+//    }
 
 function listbtn() {
   console.log(localStorage.clear())

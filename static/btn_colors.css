@@ -1,78 +1,29 @@
 @import url("/static/S-Core-Dream-light/s-core-dream.css");
 
 .btn_teacher {
-    border-color: rgb(0, 112, 192);
-    color: rgb(95, 34, 206);
-    box-shadow: 0 0 40px 40px rgb(247, 130, 130) inset, 0 0 0 0 rgb(247, 130, 130);
+    /* border-color: rgb(0, 112, 192); */
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 40px 40px rgba(0, 112, 192, 0.7) inset, 0 0 0 0 rgba(0, 112, 192, 0.7);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     justify-content: center;
     align-items: center;
   }
   .btn_teacher:hover {
-    box-shadow: 0 0 10px 0 rgb(247, 130, 130) inset, 0 0 10px 4px rgb(247, 130, 130);
+    box-shadow: 0 0 10px 0 rgba(0, 112, 192, 0.7) inset, 0 0 10px 4px rgba(0, 112, 192, 0.7);
     color: rgb(95, 34, 206);
   }
 
   .btn_student {
-    border-color: rgb(108, 251, 176);
-    color: rgb(95, 34, 206);
-    box-shadow: 0 0 40px 40px rgb(108, 251, 176) inset, 0 0 0 0 rgb(108, 251, 176);
+    border-color: rgb(72, 211, 139);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 40px 40px rgb(72, 211, 139) inset, 0 0 0 0 rgb(72, 211, 139);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     justify-content: center;
     align-items: center;
   }
   .btn_student:hover {
-    box-shadow: 0 0 10px 0 rgb(108, 251, 176) inset, 0 0 10px 4px rgb(108, 251, 176);
+    box-shadow: 0 0 10px 0 rgb(72, 211, 139) inset, 0 0 10px 4px rgb(72, 211, 139);
     color: rgb(95, 34, 206);
-  }
-
-.btn_darkblue {
-    border-color: rgb(0, 112, 192);
-    color: #fff;
-    box-shadow: 0 0 40px 40px rgb(0, 112, 192) inset, 0 0 0 0 rgb(0, 112, 192);
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-}
-
-.btn_darkblue:hover {
-    box-shadow: 0 0 10px 0 rgb(0, 112, 192) inset, 0 0 10px 4px rgb(0, 112, 192);
-    color: rgb(0, 0, 0);
-}
-
-.btn_blue {
-    border-color: rgb(0, 176, 240);
-    color: #fff;
-    box-shadow: 0 0 40px 40px rgb(0, 176, 240) inset, 0 0 0 0 rgb(0, 176, 240);
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-  }
-  .btn_blue:hover {
-    box-shadow: 0 0 10px 0 rgb(0, 176, 240) inset, 0 0 10px 4px rgb(0, 176, 240);
-    color: rgb(0, 0, 0);
-  }
-  
-  .btn_green {
-    border-color: rgb(15, 205, 147);
-    color: #fff;
-    box-shadow: 0 0 40px 40px rgb(15, 205, 147) inset, 0 0 0 0 rgb(15, 205, 147);
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-  }
-  .btn_green:hover {
-    box-shadow: 0 0 10px 0 rgb(15, 205, 147) inset, 0 0 10px 4px rgb(15, 205, 147);
-    color: rgb(0, 0, 0);
-  }
-  
-  .btn_purple {
-    border-color: rgb(153, 51, 255);
-    color: #fff;
-    box-shadow: 0 0 40px 40px rgb(153, 51, 255) inset, 0 0 0 0 rgb(153, 51, 255);
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-  }
-  .btn_purple:hover {
-    box-shadow: 0 0 10px 0 rgb(153, 51, 255) inset, 0 0 10px 4px rgb(153, 51, 255);
-    color: rgb(0, 0, 0);
   }
