@@ -34,7 +34,8 @@ function savebtn() {
   var save = document.createElement('a');
   save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(quest));
   save.setAttribute('download', filename);
-  if (document.createEvent) {
+  const answer = confirm('문제지를 저장하시겠습니까?')
+  if (true){
         var event = document.createEvent('MouseEvents');
         event.initEvent('click', true, true);
         save.dispatchEvent(event);
