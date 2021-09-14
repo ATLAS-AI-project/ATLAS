@@ -1,4 +1,4 @@
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener('beforeunload', (event) => {  //새로고침이나 뒤로가기 하기전에 알림창 뜨도록 하는 기능
 event.preventDefault();   // 명세에 따라 preventDefault는 호출해야하며, 기본 동작을 방지합니다.
 event.returnValue = ''; // 대표적으로 Chrome에서는 returnValue 설정이 필요합니다.
 })
