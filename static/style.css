@@ -1,3 +1,5 @@
+@import url("/static/S-Core-Dream-light/s-core-dream.css");
+
 body, h1, h2, h3, h5, div {
   margin: 0px;
 }
@@ -193,6 +195,7 @@ button {
   outline: none;
   filter: opacity(100%);
   border-radius: 510px;
+  font-family: "S-Core-Dream-light";
 }
 
 textarea {
