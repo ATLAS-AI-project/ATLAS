@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/static/style.css"/>
 	<link rel="stylesheet" href="/static/login.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../static/login.js"></script>
 </head>
 
 
-<body>
+<body onKeyup="enterkey()">
 	<div class="head_container">
 		ATLAS
     </div>
@@ -36,17 +37,10 @@
 		</div>
 
 		<div class="parallel_box">
-			<img src="../static/blank.png" style="height: 45px; margin-right: 10px;">
-			
-				<button class="loginBtn" style="margin-right: 45px;">
-					<div class="confirm_btn" >
-						LOGIN
-					</div>
+			<img src="../static/blank.png" style="height: 45px; margin-right: 10px;" >
+				<button class="confirm_btn" style="margin-right: 45px;" onclick="loginbtn()">
+					LOGIN
 				</button>
-
-<!--				<button class="confirm_btn" onclick="loginClick()" style="margin-right: 45px;">-->
-<!--                	<font size=6>LOGIN</font>-->
-<!--            	</button>-->
 		</div>
 	</div>
 

@@ -39,21 +39,27 @@
         </span>
     </div>
 
-    <span class="guide" style="margin-top: 60px;  margin-left: 16%;">
+    <span class="guide" style="background-color: rgb(250,250,250); margin-top: 60px;  margin-left: 16%;">
         <div class="btn_container">
-            <button class="btn_student" style="width: 380px; " onclick="homebtn()">
-                <font size=6>키워드 추출로</font>
+            <div class="testlet_name" style="border: 4px solid rgb(72, 211, 139); height: 70px; width: 100%; padding: 10px;">
+                <textarea id="title_print" type="text" style="font-size: 25px; width: 250px; height: 65px; border: none; outline: none; shadow: none; resize: none; " placeholder="답안을 입력하세요."></textarea>
+            </div>
+        </div>
+
+        <div class="btn_container">
+            <button class="btn_student" style="width: 320px; padding: 10px;" onclick="saveanswerbtn()">
+                <font size=6>답안 제출</font>
             </button>
         </div>
 
         <div class="btn_container">
-            <button class="btn_student" id="title_print" style="width: 380px; " onclick="dwbtn()">
+            <button class="btn_student" id="title_print" style="width: 320px; padding: 10px;" onclick="downloadbtn()">
                 <font size=6>문제지 다운로드</font>
             </button>
         </div>
 
         <div class="btn_container">
-            <button class="btn_student" style="width: 380px; " onclick="listbtn()">
+            <button class="btn_student" style="width: 320px; padding: 10px;" onclick="studentClick()">
                  <font size=6>문제지 목록으로</font>
             </button>
         </div>
