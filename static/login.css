@@ -19,11 +19,6 @@
     margin-top: 50px;
 }
 
-.parallel_box {
-    display: flex;
-    flex-direction: row;
-}
-
 .confirm_btn {
     width: 400px;
     height: 80px;

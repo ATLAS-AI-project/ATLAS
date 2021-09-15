@@ -34,8 +34,7 @@ function savebtn() {
   var save = document.createElement('a');
   save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(quest));
   save.setAttribute('download', filename);
-  const answer = confirm('문제지를 저장하시겠습니까?')   // prompt(),if(answer) 함수로 수정시 제목입력칸을 없에고 파일이름을 다운받을때 정할수 있도록 수정가능
-  if (true){
+  if (document.createEvent) {
         var event = document.createEvent('MouseEvents');
         event.initEvent('click', true, true);
         save.dispatchEvent(event);
@@ -58,4 +57,12 @@ function savebtn() {
 function listbtn() {
   console.log(localStorage.clear())
   window.location.href = 'http://127.0.0.1:5000/testlet_t'
+}
+
+function studentClick() {
+  window.location.href = 'http://127.0.0.1:5000/testlet_s'
+}
+
+function quizClick() {
+  window.location.href = 'http://127.0.0.1:5000/quiz_s'
 }
