@@ -7,6 +7,9 @@ import model.sentenceextraction as SE
 
 app = Flask(__name__)
 
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='Q1w2e3r4!', db='ATLAS', charset="utf8")
+cursor = db.cursor()
+
 # ------ Kobart, TextRank 조건 설정 -----#
 KBR = KB.Runner(eos_token_id=1, max_length=500, num_beams=5)
 TRR = TR.Runner(window=5, coef=1, extract=0.5)
