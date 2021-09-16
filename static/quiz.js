@@ -39,6 +39,17 @@ function savebtn() {
         var event = document.createEvent('MouseEvents');
         event.initEvent('click', true, true);
         save.dispatchEvent(event);
+      $.ajax({
+        type: "POST",
+        url: "/save",
+        data: {blank_q_name : filename,
+               blank_q : localStorage.getItem("final_question"),
+               answer : localStorage.getItem("select_keyword")},
+        async:true,
+        success: function(response){
+           console.log(localStorage.clear())
+        }
+    })
     }
   }
 
