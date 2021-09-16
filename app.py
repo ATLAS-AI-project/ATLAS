@@ -72,5 +72,32 @@ def grades_page():
 def quiz_s_page():
     return render_template('quiz_s.html')
 
+@app.route("/save", methods=["POST"])  #데이터를 저장하는 기능
+def save_page():
+    blank_q_name = request.form["blank_q_name"]
+    blank_q = request.form["blank_q"]
+    answer = request.form["answer"]
+    print(blank_q)
+    print(blank_q_name)
+    print(answer)
+    sql = f"""
+        insert into questions (answer, blank_q, blank_q_name) values ('%s','%s','%s');
+        """ % (answer, blank_q, blank_q_name)
+    cursor.execute(sql)
+    db.commit()
+    return "OK"
+
+@app.route("/list", methods=["GET"])    #문제지 이름을 전송해줌
+def list_page():
+    sql = """select * from questions"""
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    questions_dict = []
+    for result in results:
+        questions_dict.append({
+            'blank_q_name': result[1]
+        })
+    return jsonify(questions_dict)
+
 if __name__ == "__main__":
     app.run(debug=True) #http://127.0.0.1:5000/
