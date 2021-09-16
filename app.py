@@ -90,7 +90,7 @@ def save_page():
     db.commit()
     return "OK"
 
-@app.route("/list", methods=["GET"])    #문제지 이름을 전송해줌
+@app.route("/list", methods=["GET"])
 def list_page():
     sql = """select * from questions"""
     cursor.execute(sql)
@@ -98,7 +98,10 @@ def list_page():
     questions_dict = []
     for result in results:
         questions_dict.append({
-            'blank_q_name': result[1]
+            'index': result[0],
+            'blank_q_name': result[1],
+            'blank_q': result[2],
+            'answer': result[3]
         })
     return jsonify(questions_dict)
 
