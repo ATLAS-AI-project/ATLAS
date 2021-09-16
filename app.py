@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import model.Kobart as KB
 import model.textrank as TR
 # import model.textdivide as TD
