@@ -6,6 +6,7 @@ window.onload= function() {
         async:true,
         success: function(response){
           console.log(response)
+          $("#list").emtpy()
           response [{},{},{},{}]
           for(let i=0; i<response.length; i++){
             let list = response[i];
