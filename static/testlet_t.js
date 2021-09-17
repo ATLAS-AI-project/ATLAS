@@ -11,7 +11,7 @@ window.onload= function() {
           for(let i=0; i<response.length; i++){
             let list = response[i];
             $("#list").append(`
-            <ul>문제지 ${list["index"]}. : ${list["blank_q_name"]}<input type='radio' name='listt' value=${list["index"]} /></ul>
+            <ul>문제지 이름 : ${list["blank_q_name"]}<input type='radio' name='listt' value=${list["index"]} /></ul>
       `)
 
           }
