@@ -11,6 +11,7 @@ window.onload= function() {
           let list = response[num];
           $("#testlet_name").empty()
           $("#testlet_name").append(list["blank_q_name"])
+          $("#list").empty()
           console.log(typeof(JSON.parse(list["blank_q"])))
           for(let i=0; i<JSON.parse(list["blank_q"]).length; i++){
             $("#list").append(`
