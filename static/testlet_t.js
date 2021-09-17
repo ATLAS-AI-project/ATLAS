@@ -11,8 +11,9 @@ window.onload= function() {
           for(let i=0; i<response.length; i++){
             let list = response[i];
             $("#list").append(`
-            <ul>문제지 ${list["index"]}. : ${list["blank_q_name"]}<input type='radio' name='list' /></ul>
+            <ul>문제지 ${list["index"]}. : ${list["blank_q_name"]}<input type='radio' name='listt' value=${list["index"]} /></ul>
       `)
+
           }
     }
 })
@@ -28,5 +29,15 @@ function gradebtn() {
 }
 
 function delbtn(){
-    console.log(localStorage.clear())
+    let index = $('input[name=listt]:checked').val();
+    $.ajax ({
+    type: "DELETE",
+        url: "/delete?index="+index,
+        data: {index : index},
+          success: function(response) {
+          alert("삭제가 잘 되었습니다!")
+          window.location.reload();
+        }
+
+    })
 }
