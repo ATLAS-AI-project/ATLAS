@@ -1,5 +1,6 @@
+num = JSON.parse(localStorage.getItem("num"))
+
 window.onload= function() {
-  num = JSON.parse(localStorage.getItem("num"))
   $.ajax({
         type: "GET",
         url: "/list",
@@ -47,6 +48,34 @@ function saveanswerbtn() {
             window.location.href = 'http://127.0.0.1:5000/testlet_s'
             alert((JSON.parse(list["answer"])).length+'문제중 '+score+'개 맞았습니다!')
             }
-
 })
+}
+
+function downloadbtn() {
+  $.ajax({
+        type: "GET",
+        url: "/list",
+        data: {},
+        async:true,
+        success: function(response){
+        console.log(num)
+        response [{},{},{},{}]
+        let list = response[num]
+        console.log(list)
+        filename = list["blank_q_name"];
+        text = list["blank_q"].toString().replace();
+        var save = document.createElement('a');
+        save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        save.setAttribute('download', filename);
+        if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        save.dispatchEvent(event);}
+    }
+})
+}
+
+function studentClick() {
+  console.log(localStorage.clear())
+  window.location.href = 'http://127.0.0.1:5000/testlet_s'
 }
