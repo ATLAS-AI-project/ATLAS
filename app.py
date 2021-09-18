@@ -4,10 +4,11 @@ import model.Kobart as KB
 import model.textrank as TR
 # import model.textdivide as TD
 import model.sentenceextraction as SE
+import pymysql
 
 app = Flask(__name__)
 
-db = pymysql.connect(host='localhost', port=3306, user='root', passwd='Q1w2e3r4!', db='ATLAS', charset="utf8")
+db = pymysql.connect(host='localhost', port=3306, user='root', passwd='123123', db='ATLAS', charset="utf8")
 cursor = db.cursor()
 
 # ------ Kobart, TextRank 조건 설정 -----#
@@ -86,6 +87,8 @@ def save_page():
     sql = f"""
         insert into questions (answer, blank_q, blank_q_name) values ('%s','%s','%s');
         """ % (answer, blank_q, blank_q_name)
+    # f를 붙이는 것은 뒤에 나오는 변수 %s, $s, %s 를 """ """ 안에서도 실제 변수로 받기 위해서이다.
+    # """ """ 기호는 """ """ 안에 위치한 글자를 보이는 그대로 전송한다.
     cursor.execute(sql)
     db.commit()
     return "OK"
@@ -116,4 +119,4 @@ def delete_page():
     return "OK"
 
 if __name__ == "__main__":
-    app.run(debug=True) #http://127.0.0.1:5000/
+    app.run(debug=True)  # http://127.0.0.1:5000/
