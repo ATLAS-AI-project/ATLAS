@@ -105,5 +105,15 @@ def list_page():
         })
     return jsonify(questions_dict)
 
+@app.route("/delete", methods=["DELETE"])
+def delete_page():
+    index = request.args.get("index")
+    sql = """
+        delete from questions where id = %s
+    """ % index
+    cursor.execute(sql)
+    db.commit()
+    return "OK"
+
 if __name__ == "__main__":
     app.run(debug=True) #http://127.0.0.1:5000/
