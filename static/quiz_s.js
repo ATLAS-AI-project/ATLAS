@@ -1,4 +1,4 @@
-num = JSON.parse(localStorage.getItem("num"))
+num = localStorage.getItem("num")
 falsekeyword = ['기마','기마로','중세','전사','전사','파생','파생된','파','명예','명','예','칭호','호우','호날두','호감','중세','중']
 
 window.onload= function() {
@@ -14,7 +14,6 @@ window.onload= function() {
           $("#testlet_name").empty()
           $("#testlet_name").append(list["blank_q_name"])
           $("#list").empty()
-          console.log(typeof(JSON.parse(list["blank_q"])))
           for(let i=0; i<JSON.parse(list["blank_q"]).length; i++){
             $("#list").append(`
             <ul>문제${i+1}. ${JSON.parse(list["blank_q"])[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
@@ -25,7 +24,6 @@ window.onload= function() {
 }
 
 function saveanswerbtn() {
-  num = JSON.parse(localStorage.getItem("num"))
   score= 0
   wrong= []
   $.ajax({
@@ -95,7 +93,7 @@ function hint() {
       `)
           }}
     })
-}
+  }
 }
 
 function studentClick() {

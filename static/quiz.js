@@ -30,7 +30,7 @@ function homebtn() {
 
 function savebtn() {
   filename = document.getElementById("title_print").value;
-  //  quest = final_question.toString().replace(/,/g, '.\n\n\n')
+//  quest = final_question.toString().replace(/,/g, '.\n\n\n')
   quest = final_question.toString().replace()
   var save = document.createElement('a');
   save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(quest));
@@ -39,21 +39,23 @@ function savebtn() {
         var event = document.createEvent('MouseEvents');
         event.initEvent('click', true, true);
         save.dispatchEvent(event);
-      $.ajax({
-        type: "POST",
-        url: "/save",
-        data: {blank_q_name : filename,
-               blank_q : localStorage.getItem("final_question"),
-               answer : localStorage.getItem("select_keyword")},
-        async:true,
-        success: function(response){
-           console.log(localStorage.clear())
+            $.ajax({
+            type: "POST",
+            url: "/save",
+            data: {
+                blank_q_name : filename,
+                blank_q : localStorage.getItem("final_question"),
+                answer : localStorage.getItem("select_keyword")
+                },
+            async:true,
+            success: function(response){
+            console.log(localStorage.clear())
         }
     })
     }
   }
 
-//  function dwltn() {
+//  function downloadbtn() {
 //    filename = document.getElementById("title_print").value;
 //    quest = final_question.toString().replace(/,/g, '.\n\n\n')
 //    var save = document.createElement('a');
