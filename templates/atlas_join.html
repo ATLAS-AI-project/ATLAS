@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+	<link rel="stylesheet" href="/static/atlas_join.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../static/atlas_join.js"></script>
+	<script src="../static/login.js"></script>
+</head>
+
+<body onKeyup="enterkey()">
+	<div class="head_container">
+		ATLAS Membership Join Page
+    </div>
+
+	<div class="login_box">
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/id_icon.png" style="height: 45px; margin-right: 10px;">
+
+				<input id="id_to_join"
+					   type="text"
+					   placeholder="가입하실 ID를 입력하세요."
+					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
+			</div>
+		</div>
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/pwd_icon.png" style="height: 45px; margin-right: 10px;">
+
+				<input id="pwd_to_join"
+					   type="password"
+					   placeholder="비밀번호를 입력하세요."
+					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
+			</div>
+		</div>
+
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/pwd_icon.png" style="height: 45px; margin-right: 10px;">
+
+				<input id="pwd_doublecheck"
+					   type="password"
+					   placeholder="비밀번호를 한 번 더 입력하세요."
+					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
+			</div>
+		</div>
+
+        <div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/blank.png" style="height: 45px; margin-right: 10px;">
+
+				<input id="name_to_join"
+					   type="text"
+					   placeholder="이름을 입력하세요."
+					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
+			</div>
+		</div>
+		
+		<div class="id_container">
+			<div class="parallel_box">
+				<img src="../static/blank.png" style="height: 45px; margin-right: 10px;">
+
+				<input id="school_name"
+					   type="text"
+					   placeholder="재직/재학 중인 학교 이름을 입력하세요."
+					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
+			</div>
+		</div>
+
+		<div class="parallel_box">
+			<div style="margin-top: 50px; margin-right: 250px;">생년월일</div>
+			<div style="margin-top: 50px; ">구분</div>
+		</div>
+
+		<div class="parallel_box">
+			<!-- <img src="../static/blank.png" style="height: 45px;"> -->
+
+			<div>
+				<input id="year_born" type="text" placeholder="생년" >
+			</div>
+
+			<div>년</div>
+
+			<select id="month_born">
+				<option value="00">선택</option>
+				<option value="01">1</option>
+				<option value="02">2</option>
+				<option value="03">3</option>
+				<option value="04">4</option>
+				<option value="05">5</option>
+				<option value="06">6</option>
+				<option value="07">7</option>
+				<option value="08">8</option>
+				<option value="09">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+
+			<div>월</div>
+
+			<select id="day_born">
+				<option value="00">선택</option>
+				<option value="01">1</option>
+				<option value="02">2</option>
+				<option value="03">3</option>
+				<option value="04">4</option>
+				<option value="05">5</option>
+				<option value="06">6</option>
+				<option value="07">7</option>
+				<option value="08">8</option>
+				<option value="09">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>
+
+			<div>일</div>
+
+			<select id="teacher_or_student">
+				<option value="00">선택</option>
+				<option value="01">교사</option>
+				<option value="02">학생</option>
+				<option value="03">일반</option>
+			</select>
+		</div>
+
+		<div class="parallel_box">
+			<img src="../static/blank.png"
+				 style="height: 45px; margin-right: 10px;" >
+
+			<button class="confirm_btn"
+					id="submit_btn"
+					style="height: 55px; margin-right: 45px;"
+					onclick="join_submit()">
+				SUBMIT
+			</button>
+		</div>
+	</div>
+
+	<a href="http://127.0.0.1:5000/pageSelect" target=_self>
+		<img src="../static/small_logo_pivot.png"
+			 width="105px"
+			 height="127px"
+			 align="right" style="margin-top: 19px;">
+	</a>
+
+</body>
+</html>

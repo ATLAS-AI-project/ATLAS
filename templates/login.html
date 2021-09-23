@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATLAS; Automated Teacher-Studens Anchoring System</title>
+    <title>ATLAS; Automated Teacher-Learner Anchoring System</title>
     <link rel="stylesheet" href="/static/style.css"/>
 	<link rel="stylesheet" href="/static/login.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,29 +22,42 @@
         Automated Teacher-Learner Anchoring System
     </div>
 
-	<div class="login_box">
+	<div class="login_box" style="margin-top: 3%;">
 		<div class="id_container">
 			<div class="parallel_box">
 				<img src="../static/id_icon.png" style="height: 45px; margin-right: 10px;">
-				<textarea id="id_value" type="text" placeholder="ID를 입력하세요." style="height: 45px; border: 0px; shadow: none; outline: none; resize: none; margin-right: 45px;" ></textarea>
+				<textarea id="id_value" type="text" placeholder="ID를 입력하세요." style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;" ></textarea>
 			</div>
 		</div>
 		<div class="id_container">
 			<div class="parallel_box">
 				<img src="../static/pwd_icon.png" style="height: 45px; margin-right: 10px;">
-				<textarea id="pwd_value" type="text" placeholder="비밀번호를 입력하세요." style="height: 45px; border: 0px; shadow: none; outline: none; resize: none; margin-right: 45px;"></textarea>
+				<input id="pwd_value" type="password" placeholder="비밀번호를 입력하세요." style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"></input>
 			</div>
 		</div>
 
 		<div class="parallel_box">
 			<img src="../static/blank.png" style="height: 45px; margin-right: 10px;" >
-				<button class="confirm_btn" style="margin-right: 45px;" onclick="loginbtn()">
+				<button class="confirm_btn" style="height: 55px; margin-right: 45px;" onclick="loginbtn()">
 					LOGIN
 				</button>
 		</div>
+
+		<div class="parallel_box">
+			<img src="../static/blank.png" style="height: 45px; margin-right: 10px;" >
+				<button class="confirm_btn" style="height: 55px; margin-right: 45px;" onclick="joinbtn()">
+					JOIN
+				</button>
+		</div>
 	</div>
+<!-- 
+	<img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; margin-top: 66px; "> -->
 
-	<img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; margin-top: 66px; ">
 
+	<img src="../static/small_logo_pivot.png"
+		 width="105px"
+		 height="127px"
+		 align="right"
+		 style="margin-top: 18px; ">
 </body>
 </html>

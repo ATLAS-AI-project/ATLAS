@@ -35,7 +35,7 @@
                 <textarea id="inputText" type="text" placeholder="입력제한: 한글 300~1500자" style="width: 550px; height: 410px;" onChange="checkByte(this)"></textarea>
             </div>
 
-            <div class='rightitem' style="margin-left: 60px;">
+            <div class='rightitem' style="margin-left: 60px; " overflow: auto;>
                 <table id="resultWindow" type="text" onkeyup="checkByte(this)" style="text-align: center;">
                 </table>
             </div>
@@ -78,7 +78,13 @@
         </div>
     </span>
     
-    <a href="http://127.0.0.1:5000/pageSelect" target=_self><img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; padding-top: 0px;"></a>
+    <a href="http://127.0.0.1:5000/pageSelect" target=_self>
+        <img src="../static/small_logo_pivot.png"
+             width="105px"
+             height="127px"
+             align="right"
+             style="margin-top: 10px;">
+    </a>
 
 </body>
 

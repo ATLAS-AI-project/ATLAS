@@ -27,7 +27,7 @@
         <div class="btn_container" style="margin-right: 235px;">
             <span class="testlet_name">
                 <div class="title_t" style="border: 4px solid rgba(0, 112, 192, 0.7); height: 30px; width: 100%; padding: 10px; ">
-                    <textarea id="title_print" type="text" style="width: 90%; height: 45px; border: none; outline: none; shadow: none; resize: none;"></textarea>
+                    <textarea id="title_print" type="text" style="width: 90%; height: 45px; border: none; outline: none; resize: none;"></textarea>
                 </div>
             </span>
         </div>
@@ -35,7 +35,13 @@
 
     <div style="margin-top: 66px;">
         <span>
-            <div class="resultWindowLong" id="quizlist" style="border: 4px solid rgba(0, 112, 192, 0.7); height: 390px; width: 64%; padding: 10px; margin-left: 18%; margin-right: 18%;">여기에 이해점검 문항 목록이 출력됨.</div>
+            <div class="resultWindowLong" id="quizlist"
+                 style="border: 4px solid
+                        rgba(0, 112, 192, 0.7);
+                        height: 390px; width: 64%;
+                        padding: 10px; margin-left: 18%; margin-right: 18%;
+                        overflow: auto; ">
+            </div>
         </span>
     </div>
 
@@ -60,7 +66,7 @@
         </div>
     </span>
 
-    <a href="http://127.0.0.1:5000/pageSelect" target=_self><img src="../static/small_logo_pivot.png" width="105px" height="127px" style="margin-left: 1815px; padding-top: 0px;"></a>
+    <a href="http://127.0.0.1:5000/pageSelect" target=_self><img src="../static/small_logo_pivot.png" width="105px" height="127px" align="right" style="margin-top: 10px;"></a>
 
 </body>
 
