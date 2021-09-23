@@ -139,12 +139,14 @@ def join_page():
     year_born = request.form["year_born"]
     month_born = request.form["month_born"]
     day_born = request.form["day_born"]
+    print(month_born)
     user_status = request.form["teacher_or_student"]
     sql = f"""
-            insert into user_info (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status) values ('%s','%s','%s','%s',%s,%s,%s,'%s');
+            insert into user_info (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status) values ('%s','%s','%s','%s','%s','%s','%s','%s');
             """ % (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status)
     cursor.execute(sql)
     db.commit()
+    return "OK"
 
 if __name__ == "__main__":
     app.run(debug=True)
