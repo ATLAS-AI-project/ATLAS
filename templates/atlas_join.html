@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="/static/atlas_join.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../static/atlas_join.js"></script>
-	<script src="../static/login.js"></script>
+<!-- 	<script src="../static/login.js"></script> -->
 </head>
 
-<body onKeyup="enterkey()">
+<body>
 	<div class="head_container">
 		ATLAS Membership Join Page
     </div>
@@ -56,7 +56,7 @@
 			<div class="parallel_box">
 				<img src="../static/blank.png" style="height: 45px; margin-right: 10px;">
 
-				<input id="name_to_join"
+				<input id="user_name"
 					   type="text"
 					   placeholder="이름을 입력하세요."
 					   style="height: 45px; border: 0px; outline: none; resize: none; margin-right: 45px;"/>
@@ -89,7 +89,7 @@
 			<div>년</div>
 
 			<select id="month_born">
-				<option value="00">선택</option>
+				<option value=null>선택</option>
 				<option value="01">1</option>
 				<option value="02">2</option>
 				<option value="03">3</option>
@@ -107,7 +107,7 @@
 			<div>월</div>
 
 			<select id="day_born">
-				<option value="00">선택</option>
+				<option value=null>선택</option>
 				<option value="01">1</option>
 				<option value="02">2</option>
 				<option value="03">3</option>
@@ -144,7 +144,7 @@
 			<div>일</div>
 
 			<select id="teacher_or_student">
-				<option value="00">선택</option>
+				<option value=null>선택</option>
 				<option value="01">교사</option>
 				<option value="02">학생</option>
 				<option value="03">일반</option>
