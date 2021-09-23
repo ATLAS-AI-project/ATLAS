@@ -132,7 +132,7 @@ def delete_page():
 
 @app.route("/join", methods=["POST"])
 def join_page():
-    id = request.form["id"]
+    user_id = request.form["id"]
     password = request.form["password"]
     user_name = request.form["user_name"]
     school_name = request.form["school_name"]
@@ -141,8 +141,8 @@ def join_page():
     day_born = request.form["day_born"]
     user_status = request.form["teacher_or_student"]
     sql = f"""
-            insert into user_info (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status) values ('%s','%s','%s','%s','%s','%s','%s','%s');
-            """ % (id, password, user_name, school_name, year_born, month_born, day_born, user_status)
+            insert into user_info (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status) values ('%s','%s','%s','%s',%s,%s,%s,'%s');
+            """ % (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status)
     cursor.execute(sql)
     db.commit()
 
