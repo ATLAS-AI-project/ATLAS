@@ -40,9 +40,9 @@ def pageSelect(): # 페이지에서 값을 받아오는 메소드
 #         print(output(result.get('text'))) # 글자 추출 결과
 #         return render_template('index.html', result=result)
 
-@app.route("/inputText", methods=["POST"]) #postman - body 체크!
+@app.route("/inputText", methods=["POST"])  # postman - body 체크!
 def insert_text():
-# ------ single text(textarea)받아서 Kobart로 요약, TextRank로 키워드 추출 -----#
+# single text(textarea)를 받아서 Kobart로 요약, TextRank로 키워드 추출
     inputText = request.form["data"]
     print(inputText)
     KB_Result = KBR.Run_Single_Text(text=inputText)
@@ -75,6 +75,18 @@ def grades_page():
 @app.route("/quiz_s", methods=["GET"])
 def quiz_s_page():
     return render_template('quiz_s.html')
+
+@app.route("/quiz_t", methods=["GET"])
+def quiz_t_page():
+    return render_template('quiz_t.html')
+
+@app.route("/atlas_join", methods=["GET"])
+def atlas_join_page():
+    return render_template('atlas_join.html')
+
+@app.route("/join_submit", methods=["GET"])
+def join_submit():
+    return render_template('pageSelect.html')
 
 @app.route("/save", methods=["POST"])  #데이터를 저장하는 기능
 def save_page():
@@ -119,4 +131,4 @@ def delete_page():
     return "OK"
 
 if __name__ == "__main__":
-    app.run(debug=True)  # http://127.0.0.1:5000/
+    app.run(debug=True)
