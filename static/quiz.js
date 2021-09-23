@@ -9,8 +9,8 @@ window.onload= function() {
     final_question = JSON.parse(localStorage.getItem("final_question"))
    $("#testlist").empty()
    for (let i =0; i< final_question.length; i++) {
-      let result= final_question[i];
-      let keyword= select_keyword[i];
+      let result = final_question[i];
+      let keyword = select_keyword[i];
       $("#quizlist").append(`
         <tbody>
           <tr>

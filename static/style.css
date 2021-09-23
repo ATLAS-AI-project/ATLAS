@@ -220,8 +220,8 @@ textarea {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgb(101, 240, 195);
-  /*not in ie */
+  background: rgb(97, 255, 205);
+  /* not in ie */
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');
   /* ie */
 }
@@ -238,18 +238,6 @@ textarea {
   /*감추기*/
   display: none;
 }
-
-/* .item_area_70 {
-  max-width: 70%;
-  margin: 0 auto;
-  margin-top: 150px;
-}
-
-.item_area_100 {
-  max-width: 100%;
-  margin: 0 auto;
-  margin-top: 150px;
-} */
 
 .item-wrap .items {
   /* 자식들을 감싸고 있는 부모 */

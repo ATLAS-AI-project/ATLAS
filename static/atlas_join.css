@@ -1,0 +1,155 @@
+@import url("/static/S-Core-Dream-light/s-core-dream.css");
+
+body {
+    background-color: #fafafa;
+    /* background-image: url('new1.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: s-core-dream-light;
+    font-size: 35px;
+    /* font-color: #4e4e4e; */
+  }
+
+.login_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: s-core-dream-light;
+    min-height: 60vh;
+    /* background: #301e4e; */
+}
+
+.id_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    font-family: s-core-dream-light;
+}
+
+.confirm_btn {
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-color: rgb(86, 212, 147);
+    border-radius: 5px;
+    box-shadow: 0 0 40px 40px rgb(86, 212, 147) inset, 0 0 0 0 rgb(86, 212, 147);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    margin-top: 50px;
+}
+.confirm_btn:hover {
+    box-shadow: 0 0 10px 0 rgb(86, 212, 147) inset, 0 0 10px 4px rgb(86, 212, 147);
+    color: rgb(0, 0, 0);
+}
+
+#id_to_join {
+    width: 400px;
+    height: 80px;
+    filter: opacity(80%);
+    border-radius: 5px;
+    border: 1px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: s-core-dream-light;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+#pwd_to_join {
+    width: 400px;
+    height: 80px;
+    filter: opacity(80%);
+    border-radius: 5px;
+    border: 1px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: s-core-dream-light;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#pwd_doublecheck {
+    width: 400px;
+    height: 80px;
+    filter: opacity(80%);
+    border-radius: 5px;
+    border: 1px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: s-core-dream-light;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#name_to_join {
+    width: 400px;
+    height: 80px;
+    filter: opacity(80%);
+    border-radius: 5px;
+    border: 1px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: s-core-dream-light;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#year_born {
+    font-size: 25px;
+    font-family:  s-core-dream-light;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+#month_born {
+    font-size: 25px;
+    font-family:  s-core-dream-light;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    margin-left: 20px;
+}
+
+#day_born {
+    font-size: 25px;
+    font-family:  s-core-dream-light;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    margin-left: 20px;
+}
+
+#teacher_or_student {
+    font-size: 25px;
+    font-family:  s-core-dream-light;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin-left: 20px;
+}
+
+#school_name {
+    width: 400px;
+    height: 80px;
+    filter: opacity(80%);
+    border-radius: 5px;
+    border: 1px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: s-core-dream-light;
+    font-size: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
