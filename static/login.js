@@ -1,6 +1,8 @@
 function loginbtn() {
-  input_id = document.getElementById('id_value')
-  input_pw = document.getElementById('pw_value')
+  const input_id = document.getElementById('id_value').value;
+  console.log(JSON.stringify(input_id))
+  const input_pw = document.getElementById('pwd_value').value;
+  console.log(JSON.stringify(input_pw))
   $.ajax({
         type: "GET",
         url: "/session",
@@ -11,10 +13,10 @@ function loginbtn() {
           response [{},{},{}]
           for (let i =0; i< response.length; i++) {
             let list = response[i]
-            if (input_id == list[id]){
-              if (input_pw == list[password]){
-                localStorage.setItem('session',JSON.stringify(list[status]))
-                if (JSON.parse(localStorage.getItem("session")) == '선생'){
+            if (JSON.stringify(input_id) == list[id]){
+              if (JSON.stringify(input_pw) == list[password]){
+                localStorage.setItem('session',list[status])
+                if (localStorage.getItem("session") == 1){
                   window.location.href = 'http://127.0.0.1:5000/pageSelect'
                 }else{window.location.href = 'http://127.0.0.1:5000/testlet_s'}
               }else{alert('비밀번호를 확인하여 주십시오')}
