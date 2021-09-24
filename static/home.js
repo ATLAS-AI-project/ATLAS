@@ -1,5 +1,5 @@
 window.onload= function() {
-  if (typeof localStorage.getItem('session') == 1){
+  if (localStorage.getItem('session') == 1){
     return 'ok'
   }else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
     alert('권한이 없습니다')
