@@ -76,7 +76,6 @@ function btnClick1() {
  }
 
 function checkByte(obj){
-    console.log("HERE")
     const maxByte = 3000; //최대 3000바이트
     const text_val = obj.value; //입력한 문자
     const text_len = text_val.length; //입력한 문자수
@@ -132,7 +131,7 @@ function btnClick2(){
      for (let i =0; i< select_question.length; i++) {
         questionToString = select_question[i].toString()
         console.log(questionToString)
-        change = questionToString.replaceAll(select_keyword[i], '___')
+        change = questionToString.replaceAll(select_keyword[i], '______')
         final_question.push(change)
     }
         console.log(final_question)
