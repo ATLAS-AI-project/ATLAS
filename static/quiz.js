@@ -7,13 +7,17 @@ window.onload= function() {
     window.location.href = 'http://127.0.0.1:5000/testlet_s'}
   else if (localStorage.getItem('session') == 1){
     key = JSON.parse(localStorage.getItem("key"))
+    console.log(key)
     count = JSON.parse(localStorage.getItem("count"))
+    console.log(count)
     questions = JSON.parse(localStorage.getItem("questions"))
+    console.log(questions)
     select_keyword = JSON.parse(localStorage.getItem("select_keyword"))
-    console.log(JSON.parse(localStorage.getItem("select_keyword")))
+    console.log(select_keyword)
     select_question = JSON.parse(localStorage.getItem("select_question"))
-    console.log(JSON.parse(localStorage.getItem("select_question")))
+    console.log(select_question)
     final_question = JSON.parse(localStorage.getItem("final_question"))
+    console.log(final_question)
    $("#testlist").empty()
    for (let i =0; i< final_question.length; i++) {
       let result= final_question[i];
@@ -56,6 +60,9 @@ function savebtn() {
                 },
             async:true,
             success: function(response){
+              console.log(blank_q_name)
+              console.log(blank_q)
+              console.log(answer)
         }
     })
     }
