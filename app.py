@@ -93,9 +93,9 @@ def save_page():
     blank_q_name = request.form["blank_q_name"]
     blank_q = request.form["blank_q"]
     answer = request.form["answer"]
-    print(blank_q)
-    print(blank_q_name)
-    print(answer)
+    print('문제: ' + blank_q)
+    print('문제지이름: ' + blank_q_name)
+    print('키워드(정답): ' + answer)
     sql = f"""
         insert into questions (answer, blank_q, blank_q_name) values ('%s','%s','%s');
         """ % (answer, blank_q, blank_q_name)
@@ -118,6 +118,7 @@ def list_page():
             'blank_q': result[2],
             'answer': result[3]
         })
+    print(questions_dict)
     return jsonify(questions_dict)
 
 @app.route("/delete", methods=["DELETE"])
@@ -132,15 +133,22 @@ def delete_page():
 
 @app.route("/join", methods=["POST"])
 def join_page():
-    user_id = request.form["id"]
+    id = request.form["id"]
+    print('아이디=' + id)
     password = request.form["password"]
+    print('비밀번호=' + password)
     user_name = request.form["user_name"]
+    print('회원의 이름=' + user_name)
     school_name = request.form["school_name"]
+    print('학교명=' + school_name)
     year_born = request.form["year_born"]
+    print('태어난 년도=' + year_born)
     month_born = request.form["month_born"]
+    print('태어난 달=' + month_born)
     day_born = request.form["day_born"]
-    print(month_born)
+    print('태어난 일=' + day_born)
     user_status = request.form["teacher_or_student"]
+    print('회원의 신분(1=선생,2=학생,3=일반)=' + user_status)
     sql = f"""
             insert into user_info (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status) values ('%s','%s','%s','%s','%s','%s','%s','%s');
             """ % (user_id, password, user_name, school_name, year_born, month_born, day_born, user_status)
@@ -160,6 +168,7 @@ def login_sessions():
             'password': result[2],
             'status': result[8]
         })
+    print(login_session)
     return jsonify(login_session)
 
 if __name__ == "__main__":
