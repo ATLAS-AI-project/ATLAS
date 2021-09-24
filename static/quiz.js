@@ -21,7 +21,6 @@ window.onload= function() {
           </tr>
         </tbody>`)}
  }
-//console.log(localStorage.clear())로 나중에 데이터를 지워주어야함 <-이거는 브라우저에서 삭제를 안하면 계속남아있음
 
 function homebtn() {
   window.location.href = 'http://127.0.0.1:5000/home'
