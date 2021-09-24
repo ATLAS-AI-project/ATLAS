@@ -148,5 +148,19 @@ def join_page():
     db.commit()
     return "OK"
 
+@app.route("/session", methods=["GET"])
+def login_sessions():
+    sql = """select * from user_info"""
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    login_session = []
+    for result in results:
+        login_session.append({
+            'id': result[1],
+            'password': result[2],
+            'status': result[8]
+        })
+    return jsonify(login_session)
+
 if __name__ == "__main__":
     app.run(debug=True)
