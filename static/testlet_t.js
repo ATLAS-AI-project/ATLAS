@@ -1,21 +1,30 @@
 window.onload= function() {
-    $.ajax({
+  if (typeof localStorage.getItem('session') == 'undefined'){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login'
+  } else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/testlet_s'}
+    else if (localStorage.getItem('session') == 1){
+  $.ajax({
         type: "GET",
         url: "/list",
         data: {},
         async:true,
         success: function(response){
-            console.log(response)
-            $("#list").empty()
-            response [{},{},{},{}]
-            for(let i=0; i<response.length; i++){
-                let list = response[i];
-                $("#list").append(`
-                <ul>문제지 이름 : ${list["blank_q_name"]}<input type='radio' name='listt' value=${list["index"]} /></ul>
-                `)
+          console.log(response)
+          $("#list").empty()
+          response [{},{},{},{}]
+          for(let i=0; i<response.length; i++){
+            let list = response[i];
+            $("#list").append(`
+            <ul>문제지 이름 : ${list["blank_q_name"]}<input type='radio' name='listt' value=${list["index"]} /></ul>
+      `)
           }
-        }
-    })
+    }
+})
+} else{alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login'}
 }
 
 function homebtn() {
