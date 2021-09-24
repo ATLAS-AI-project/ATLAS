@@ -48,7 +48,6 @@ function savebtn() {
                 },
             async:true,
             success: function(response){
-            console.log(localStorage.clear())
         }
     })
     }
@@ -68,7 +67,6 @@ function savebtn() {
 //    }
 
 function listbtn() {
-  console.log(localStorage.clear())
   window.location.href = 'http://127.0.0.1:5000/testlet_t'
 }
 
