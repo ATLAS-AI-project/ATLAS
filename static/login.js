@@ -28,7 +28,6 @@ function loginbtn() {
         }
     })
 }
-break
 
 function enterkey() {
     if (window.event.keyCode == 13) {
