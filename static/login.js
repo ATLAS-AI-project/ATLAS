@@ -12,7 +12,7 @@ function loginbtn() {
         success: function(response) {
             console.log(response)
             response [{}, {}, {}]
-            for (let i = 0; i< response.length; i++) {
+            for (let i = 0; i < response.length; i++) {
                 let list = response[i]
                 console.log(list['id'])
                 if (input_id == list['id']) {
