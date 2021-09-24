@@ -13,9 +13,9 @@ function loginbtn() {
           response [{},{},{}]
           for (let i =0; i< response.length; i++) {
             let list = response[i]
-            if (JSON.stringify(input_id) == list[id]){
-              if (JSON.stringify(input_pw) == list[password]){
-                localStorage.setItem('session',list[status])
+            if (JSON.stringify(input_id) == list['id']){
+              if (JSON.stringify(input_pw) == list['password']){
+                localStorage.setItem('session',list['status'])
                 if (localStorage.getItem("session") == 1){
                   window.location.href = 'http://127.0.0.1:5000/pageSelect'
                 }else{window.location.href = 'http://127.0.0.1:5000/testlet_s'}
