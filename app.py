@@ -133,8 +133,8 @@ def delete_page():
 
 @app.route("/join", methods=["POST"])
 def join_page():
-    id = request.form["id"]
-    print('아이디=' + id)
+    user_id= request.form["id"]
+    print('아이디=' + user_id)
     password = request.form["password"]
     print('비밀번호=' + password)
     user_name = request.form["user_name"]
