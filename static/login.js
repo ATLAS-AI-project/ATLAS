@@ -9,10 +9,10 @@ function loginbtn() {
         url: "/session",
         data: {},
         async:true,
-        success: function(response){
+        success: function(response) {
             console.log(response)
-            response [{},{},{}]
-            for (let i =0; i< response.length; i++) {
+            response [{}, {}, {}]
+            for (let i = 0; i< response.length; i++) {
                 let list = response[i]
                 console.log(list['id'])
                 if (input_id == list['id']) {
@@ -28,6 +28,7 @@ function loginbtn() {
     })
 }
 break
+
 function enterkey() {
     if (window.event.keyCode == 13) {
     loginbtn();}
