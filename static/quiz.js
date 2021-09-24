@@ -1,4 +1,11 @@
 window.onload= function() {
+  if (typeof localStorage.getItem('session') == 'undefined'){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login'
+  }else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/testlet_s'}
+  else if (localStorage.getItem('session') == 1){
     key = JSON.parse(localStorage.getItem("key"))
     count = JSON.parse(localStorage.getItem("count"))
     questions = JSON.parse(localStorage.getItem("questions"))
@@ -9,8 +16,8 @@ window.onload= function() {
     final_question = JSON.parse(localStorage.getItem("final_question"))
    $("#testlist").empty()
    for (let i =0; i< final_question.length; i++) {
-      let result = final_question[i];
-      let keyword = select_keyword[i];
+      let result= final_question[i];
+      let keyword= select_keyword[i];
       $("#quizlist").append(`
         <tbody>
           <tr>
@@ -20,6 +27,8 @@ window.onload= function() {
             <td>정답 : ${keyword}</td>
           </tr>
         </tbody>`)}
+ }else{alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login'}
  }
 
 function homebtn() {
