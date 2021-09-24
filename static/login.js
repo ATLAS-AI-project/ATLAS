@@ -17,6 +17,7 @@ function loginbtn() {
                 console.log(list['id'])
                 if (input_id == list['id']) {
                     if (input_pw == list['password']) {
+                        console.log(list['password'])
                         localStorage.setItem('session',list['status'])
                             if (localStorage.getItem("session") == 1) {
                                 window.location.href = 'http://127.0.0.1:5000/pageSelect'
