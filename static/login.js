@@ -21,7 +21,7 @@ function loginbtn() {
                             if (localStorage.getItem("session") == 1) {
                                 window.location.href = 'http://127.0.0.1:5000/pageSelect'
                             } else {window.location.href = 'http://127.0.0.1:5000/testlet_s'}
-                    } else {alert('비밀번호를 확인하여 주십시오')}
+                    } else {alert('비밀번호를 확인하여 주십시오.')}
                 }
             }
         }
