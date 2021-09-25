@@ -1,6 +1,17 @@
 num = localStorage.getItem("num")
 falsekeyword = ['기마','기마로','중세','전사','전사','파생','파생된','파','명예','명','예','칭호','호우','호날두','호감','중세','중']
 
+function noerror(jsondata){
+  let result0 = jsondata.replace(/\n/gi, "\\n")
+  let result1 = result0.replace(/\t/gi,"\\t")
+  let result2 = result1.replace(/\f/gi, "\\f")
+
+  let final = result2.replace(/\r/gi, "\\r")
+  final = final.replace(/[\u0000-\u0019]+/g,"")
+  return final
+}
+
+
 window.onload= function() {
     $.ajax({
         type: "GET",
@@ -14,9 +25,10 @@ window.onload= function() {
             $("#testlet_name").empty()
             $("#testlet_name").append(list["blank_q_name"])
             $("#list").empty()
-            for(let i=0; i<JSON.parse(list["blank_q"]).length; i++){
+            console.log(list["blank_q"])
+            for(let i=0; i<JSON.parse(noerror(list["blank_q"])).length; i++){
                 $("#list").append(`
-                <ul>문제${i+1}. ${JSON.parse(list["blank_q"])[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
+                <ul>문제${i+1}. ${JSON.parse(noerror(list["blank_q"]))[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
                 `)
             }
         }
@@ -83,14 +95,14 @@ function hint() {
                 response [{},{},{},{}]
                 let list = response[num];
                 $("#list").empty()
-                for(let i=0; i<JSON.parse(list["blank_q"]).length; i++){
+                for(let i=0; i<JSON.parse(noerror(list["blank_q"])).length; i++){
                     selquiz[i] = []       //arr[select_keyword.length][4] 만들기?
                     selquiz[i].push(JSON.parse(list["answer"])[i])
                     selquiz[i] = no4overlap(selquiz[i])  //사지선다 객관식
                     selquiz[i] = shuffle(selquiz[i])
 
                     $("#list").append(`
-                    <ul>문제${i+1}. ${JSON.parse(list["blank_q"])[i]} <br> 힌트 : ${selquiz[i].join('  /  ')} <br> <input type='text' name='answer' id="answer${i}" /></ul>
+                    <ul>문제${i+1}. ${JSON.parse(noerror(list["blank_q"]))[i]} <br> 힌트 : ${selquiz[i].join('  /  ')} <br> <input type='text' name='answer' id="answer${i}" /></ul>
                     `)
                 }
             }
