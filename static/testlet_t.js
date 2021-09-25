@@ -1,12 +1,6 @@
 window.onload= function() {
-  if (typeof localStorage.getItem('session') == 'undefined'){
-    alert('권한이 없습니다')
-    window.location.href = 'http://127.0.0.1:5000/login'
-  } else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
-    alert('권한이 없습니다')
-    window.location.href = 'http://127.0.0.1:5000/testlet_s'}
-    else if (localStorage.getItem('session') == 1){
-  $.ajax({
+  if (localStorage.getItem('session') == 1){
+    $.ajax({
         type: "GET",
         url: "/list",
         data: {},
@@ -23,7 +17,11 @@ window.onload= function() {
           }
     }
 })
-} else{alert('권한이 없습니다')
+    return "ok"
+  } else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/testlet_s'}
+    else if(typeof localStorage.getItem('session') == 'undefined') {alert('권한이 없습니다')
     window.location.href = 'http://127.0.0.1:5000/login'}
 }
 
