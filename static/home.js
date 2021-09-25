@@ -131,7 +131,7 @@ function btnClick2(){
      for (let i =0; i< select_question.length; i++) {
         questionToString = select_question[i].toString()
         console.log(questionToString)
-        change = questionToString.replaceAll(select_keyword[i], '______')
+        change = questionToString.replaceAll(select_keyword[i], '____________')
         final_question.push(change)
     }
         console.log(final_question)
