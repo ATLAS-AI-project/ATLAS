@@ -19,6 +19,16 @@ function listbtn() {
 num = localStorage.getItem("num")
 falsekeyword = ['신진사대부', '권문세족', '음서', '대농장', '중소지주', '신흥 무인세력', '이성계', '위화도 회군', '4불가론', '과전법', '성리학', '하여가', '단심가', '전통과 명분', '정몽주', '이방원', '선죽교', '관학파', '훈구파', '이황', '이이', '세종', '정도전', '사학파', '사림파', '1592년', '임진왜란', '서인', '노론', '세도가문', '유향소', '향약', '서원', '삼사', '언론', '사간원', '사헌부', '홍문관', '조선경국전', '경제문감', '불씨잡변', '주자가례', '왕자의 난', '6조 직계제', '의정부', '재상 중심', '중서문하성', '낭사', '왕권 견제', '사병 혁파', '양전사업', '토지조사', '호패법 ', '노비안검법', '전민변정도감', '의정부서사제', '왕권과 신권의 조화', '집현전', '경연', '4군 6진', '한글', '계유정난', '서연']
 
+function noerror(jsondata){
+  let result0 = jsondata.replace(/\n/gi, "\\n")
+  let result1 = result0.replace(/\t/gi,"\\t")
+  let result2 = result1.replace(/\f/gi, "\\f")
+
+  let final = result2.replace(/\r/gi, "\\r")
+  final = final.replace(/[\u0000-\u0019]+/g,"")
+  return final
+}
+
 window.onload= function() {
     $.ajax({
         type: "GET",
