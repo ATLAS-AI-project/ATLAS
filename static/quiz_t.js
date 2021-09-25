@@ -42,9 +42,9 @@ window.onload= function() {
             $("#testlet_name").empty()
             $("#testlet_name").append(list["blank_q_name"])
             $("#list").empty()
-            for(let i=0; i<JSON.parse(list["blank_q"]).length; i++){
+            for(let i=0; i<JSON.parse(noerror(list["blank_q"])).length; i++){
                 $("#list").append(`
-                <ul>문제${i+1}. ${JSON.parse(list["blank_q"])[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
+                <ul>문제${i+1}. ${JSON.parse(noerror(list["blank_q"]))[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
                 `)
             }
         }
