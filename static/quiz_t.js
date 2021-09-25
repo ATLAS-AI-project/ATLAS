@@ -1,3 +1,13 @@
+window.onload= function() {
+  if (localStorage.getItem('session') == 1){
+    return 'ok'
+  }else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/testlet_s'
+  }else{alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login'}
+  }
+
 function homebtn() {
     window.location.href = 'http://127.0.0.1:5000/home'
 }
