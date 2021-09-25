@@ -31,6 +31,7 @@ window.onload= function() {
             <td>정답 : ${keyword}</td>
           </tr>
         </tbody>`)}
+    return 'ok'
  }else{alert('권한이 없습니다')
     window.location.href = 'http://127.0.0.1:5000/login'}
  }
