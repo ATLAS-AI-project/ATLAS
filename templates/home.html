@@ -14,13 +14,24 @@
 </head>
 
 <body>
-    <div class="wrap-loading display-none" id="wrap-loading-green">
+
+    <div class="wrap-loading display-none" id="bookflip">
+        <div style="bottom: 0px; top: 425px;">ATLAS 인공지능이 키워드를 추출하고 있습니다.</div>
         <div>
-            <video height="940px;" muted autoplay loop>
-                  <source src="../static/loading.mp4" type="video/mp4">
-             </video>
+            <img src="../static/bookflip_green.gif"
+                 style="width: 640px;">
         </div>
+        <div style="bottom: auto; top: 720px;">ATLAS 인공지능이 열일 중입니다. 잠시만 기다려 주세요 ^.~</div>
     </div>
+
+
+<!--    <div class="wrap-loading display-none" id="wrap-loading-green">-->
+<!--        <div>-->
+<!--            <video height="940px;" muted autoplay loop>-->
+<!--                  <source src="../static/loading.mp4" type="video/mp4">-->
+<!--             </video>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="head_container">
         ATLAS 인공지능이 키워드를 추출합니다.
@@ -30,13 +41,20 @@
     </div>
 
     <span class="guide">
-        <div class="items_h_container" style="margin-top: 50px; ">
-            <div class="leftitem" style="margin-right: 56px;" overflow: auto;>
-                <textarea id="inputText" type="text" placeholder="입력제한: 한글 300~1500자" style="width: 550px; height: 410px;" onChange="checkByte(this)"></textarea>
+        <div class="items_h_container" \
+             style="margin-top: 50px; ">
+            <div class="leftitem"
+                 style="margin-right: 56px;"
+                 overflow: auto;>
+                <textarea id="inputText" type="text" placeholder="입력제한: 한글 300~1500자" onChange="checkByte(this)" style="margin-top: 0px; margin-bottom: 0px; width: 550px; height: 405px; resize: none; "></textarea>
             </div>
 
-            <div class='rightitem' style="margin-left: 60px; " overflow: auto;>
-                <table id="resultWindow" type="text" onkeyup="checkByte(this)" style="text-align: center;">
+            <div class='rightitem'
+                 style="margin-left: 60px; height: 410px" >
+                <table id="resultWindow"
+                       type="text"
+                       onkeyup="checkByte(this)"
+                       style="text-align: center;">
                 </table>
             </div>
         </div>
@@ -44,8 +62,10 @@
 
     <span class="guide" style="width: 550px; ">
         <div class="btn_container" style="font-size: 15px;">
-            <span class="byte_container" style="margin-top: 370px; margin-right: 120px;">
-                <span id="nowByte" style="color: green;padding-right: 3px;">
+            <span class="byte_container"
+                  style="margin-top: 370px; margin-right: 120px;">
+                <span id="nowByte"
+                      style="color: green;padding-right: 3px;">
                 </span>
                 / 3000 bytes
             </span>
@@ -54,28 +74,34 @@
 
     <span class="guide" style="margin-top: 378px; ">
         <div class="btn_container">
-            <button class="btn_teacher" style="width: 320px; padding: 10px;" onclick="btnClick()">
+            <button class="btn_teacher"
+                    style="width: 400px; padding: 108x;"
+                    onclick="btnClick()">
                 <font size=6>키워드 추출</font>
             </button>
         </div>
 
         <div class="btn_container">
-            <button class="btn_teacher" style="width: 320px; padding: 10px;" onclick="btnClick2()">
+            <button class="btn_teacher"
+                    style="width: 400px; padding: 10px;"
+                    onclick="btnClick2()">
                 <font size=6>평가문항 생성</font>
             </button>
         </div>
 
         <div class="btn_container">
-            <button class="btn_teacher" style="width: 320px; padding: 10px;" onclick="listbtn()">
+            <button class="btn_teacher"
+                    style="width: 400px; padding: 10px;"
+                    onclick="listbtn()">
                 <font size=6>문제지 목록으로</font>
             </button>
         </div>
 
-        <div class="btn_container">
-            <button class="btn_teacher" style="width: 320px; " onclick="gradebtn()">
-                <font size=6>성적 확인</font>
-            </button>
-        </div>
+<!--        <div class="btn_container">-->
+<!--            <button class="btn_teacher" style="width: 320px; " onclick="gradebtn()">-->
+<!--                <font size=6>성적 확인</font>-->
+<!--            </button>-->
+<!--        </div>-->
     </span>
     
     <a href="http://127.0.0.1:5000/pageSelect" target=_self>
