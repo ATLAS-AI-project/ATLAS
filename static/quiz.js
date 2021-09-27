@@ -1,11 +1,5 @@
 window.onload= function() {
-  if (typeof localStorage.getItem('session') == 'undefined'){
-    alert('권한이 없습니다')
-    window.location.href = 'http://127.0.0.1:5000/login'
-  }else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
-    alert('권한이 없습니다')
-    window.location.href = 'http://127.0.0.1:5000/testlet_s'}
-  else if (localStorage.getItem('session') == 1){
+  if (localStorage.getItem('session') == 1){
     key = JSON.parse(localStorage.getItem("key"))
     console.log(key)
     count = JSON.parse(localStorage.getItem("count"))
@@ -32,9 +26,13 @@ window.onload= function() {
           </tr>
         </tbody>`)}
     return 'ok'
- }else{alert('권한이 없습니다')
-    window.location.href = 'http://127.0.0.1:5000/login'}
- }
+  }else if (localStorage.getItem('session') == 2 || localStorage.getItem('session') == 3){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/testlet_s'
+  }else if (typeof localStorage.getItem('session') == 'undefined'){
+    alert('권한이 없습니다')
+    window.location.href = 'http://127.0.0.1:5000/login
+  }
 
 function homebtn() {
   window.location.href = 'http://127.0.0.1:5000/home'
