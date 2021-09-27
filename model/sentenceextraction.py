@@ -17,7 +17,7 @@ class TextBlanker:
             count = 0
             for each_line in lines:
                 if each_line.find(self.keywords[i])>=0:
-                    keyword_sentence.append(each_line + '.\n\n')
+                    keyword_sentence.append(each_line + '.')
                     keyword_sentence.append(self.keywords[i])
                     count +=1
                 else:
