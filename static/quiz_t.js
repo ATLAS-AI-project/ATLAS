@@ -44,7 +44,7 @@ window.onload= function() {
             $("#list").empty()
             for(let i=0; i<JSON.parse(noerror(list["blank_q"])).length; i++){
                 $("#list").append(`
-                <ul>문제${i+1}. ${JSON.parse(noerror(list["blank_q"]))[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
+                <ul>문제${i+1}<br> ${JSON.parse(noerror(list["blank_q"]))[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
                 `)
             }
         }
