@@ -38,7 +38,7 @@ function homebtn() {
 
 function savebtn() {
   filename = document.getElementById("title_print").value;
-  quest = final_question.toString().replace(/.,/g, '.\n\n\n\n')
+  quest = final_question.toString().replace(/\.,/g, '.\n\n\n\n')
 //  quest = final_question.toString().replace()
   var save = document.createElement('a');
   save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(quest));
