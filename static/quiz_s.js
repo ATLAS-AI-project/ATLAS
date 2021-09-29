@@ -28,8 +28,8 @@ window.onload= function() {
             console.log(list["blank_q"])
             for(let i=0; i<JSON.parse(noerror(list["blank_q"])).length; i++){
                 $("#list").append(`
-                <ul>문제${i+1}<br> ${JSON.parse(noerror(list["blank_q"]))[i]} <br> <input type='text' name='answer' id="answer${i}" /></ul>
-                `)
+                    <ul>문제${i+1}<br> ${JSON.parse(noerror(list["blank_q"]))[i].toString().replace(/\.,/g, '.<br>')} <br><br> 힌트 : ${selquiz[i].join('  /  ')} <br> <input type='text' name='answer' id="answer${i}" /><br><br><br></ul>
+                    `)
             }
         }
     })
