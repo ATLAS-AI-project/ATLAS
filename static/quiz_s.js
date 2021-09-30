@@ -102,7 +102,7 @@ function hint() {
                     selquiz[i] = shuffle(selquiz[i])
 
                     $("#list").append(`
-                    <ul>문제${i+1}<br> ${JSON.parse(noerror(list["blank_q"]))[i]} <br> 힌트 : ${selquiz[i].join('  /  ')} <br> <input type='text' name='answer' id="answer${i}" /></ul>
+                    <ul>문제${i+1}<br> ${JSON.parse(noerror(list["blank_q"]))[i].toString().replace(/\.,/g, '.<br>')} <br><br> 힌트 :&nbsp ${selquiz[i].join(' &nbsp  /  &nbsp ')} <br> <input type='text' name='answer' id="answer${i}" /><br><br><br></ul>
                     `)
                 }
             }

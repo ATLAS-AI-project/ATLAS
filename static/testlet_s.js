@@ -30,7 +30,9 @@ function download_s_Click(){
         let list = response[num]
         console.log(list)
         filename = list["blank_q_name"];
-        text = list["blank_q"];
+        text3 = list["blank_q"].toString()
+        text = text3.replaceAll('.,', '.\n')
+//        text = list["blank_q"];
         var save = document.createElement('a');
         save.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
         save.setAttribute('download', filename);

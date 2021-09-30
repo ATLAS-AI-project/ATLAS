@@ -19,10 +19,10 @@ window.onload= function() {
       $("#quizlist").append(`
         <tbody>
           <tr>
-            <td>${result}</td>
+            <td>${result.toString().replace(/\.,/g, '.<br>')}</td>
           </tr>
           <tr>
-            <td>정답 : ${keyword}</td>
+            <td>정답 : ${keyword}<br><br></td>
           </tr>
         </tbody>`)}
     return 'ok'
